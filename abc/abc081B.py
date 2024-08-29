@@ -6,14 +6,14 @@ a = list(map(int, input().split()))
 # print(ans)
 ans = 0
 while True:
-    for v,i in enumerate(a):
-        isInOdd = False
+    oddFlg = False
+    for v in a:
         if v % 2 == 1:
-            isInOdd = True
-        if isInOdd:
-            break
-    
+            oddFlg = True
+    if oddFlg:
+        break
+    for i in range(len(a)):
+        a[i] = a[i] / 2
+    ans+=1
 
 print(ans)
-
-    
